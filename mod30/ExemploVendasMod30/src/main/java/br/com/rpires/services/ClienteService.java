@@ -8,7 +8,6 @@ import br.com.rpires.domain.Cliente;
 import br.com.rpires.exceptions.DAOException;
 import br.com.rpires.exceptions.MaisDeUmRegistroException;
 import br.com.rpires.exceptions.TableException;
-import br.com.rpires.exceptions.TipoChaveNaoEncontradaException;
 import br.com.rpires.services.generic.GenericService;
 
 /**
@@ -16,18 +15,19 @@ import br.com.rpires.services.generic.GenericService;
  *
  */
 public class ClienteService extends GenericService<Cliente, Long> implements IClienteService {
-	
-	//private IClienteDAO clienteDAO;
-	
+
+	// private IClienteDAO clienteDAO;
+
 	public ClienteService(IClienteDAO clienteDAO) {
 		super(clienteDAO);
-		//this.clienteDAO = clienteDAO;
+		// this.clienteDAO = clienteDAO;
 	}
 
-//	@Override
-//	public Boolean salvar(Cliente cliente) throws TipoChaveNaoEncontradaException {
-//		return clienteDAO.cadastrar(cliente);
-//	}
+	// @Override
+	// public Boolean salvar(Cliente cliente) throws TipoChaveNaoEncontradaException
+	// {
+	// return clienteDAO.cadastrar(cliente);
+	// }
 
 	@Override
 	public Cliente buscarPorCPF(Long cpf) throws DAOException {
@@ -40,14 +40,14 @@ public class ClienteService extends GenericService<Cliente, Long> implements ICl
 		return null;
 	}
 
-//	@Override
-//	public void excluir(Long cpf) {
-//		clienteDAO.excluir(cpf);
-//	}
-//
-//	@Override
-//	public void alterar(Cliente cliente) throws TipoChaveNaoEncontradaException{
-//		clienteDAO.alterar(cliente);
-//	}
+	// @Override
+	// public void excluir(Long cpf) {
+	// clienteDAO.excluir(cpf);
+	// }
+	//
+	// @Override
+	// public void alterar(Cliente cliente) throws TipoChaveNaoEncontradaException{
+	// clienteDAO.alterar(cliente);
+	// }
 
 }

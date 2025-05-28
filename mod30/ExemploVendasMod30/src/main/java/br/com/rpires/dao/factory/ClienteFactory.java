@@ -8,10 +8,6 @@ import java.sql.SQLException;
 
 import br.com.rpires.domain.Cliente;
 
-/**
- * @author rodrigo.pires
- *
- */
 public class ClienteFactory {
 
 	public static Cliente convert(ResultSet rs) throws SQLException {
@@ -24,6 +20,7 @@ public class ClienteFactory {
 		cliente.setNumero(rs.getInt(("NUMERO")));
 		cliente.setCidade(rs.getString(("CIDADE")));
 		cliente.setEstado(rs.getString(("ESTADO")));
+		cliente.setIdade(rs.getInt("IDADE"));
 		return cliente;
 	}
 }

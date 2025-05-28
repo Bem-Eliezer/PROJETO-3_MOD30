@@ -1,22 +1,21 @@
-version: '3'
 
 services:
   ebac-postgres-compose:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: "admin"
+      POSTGRES_PASSWORD: "eliezer"
     ports:
-      - "15432:5432"
+      - "5433:5432"
     volumes:
-      - /Users/rodrigo.pires/dev/docker/volumes/PostgreSQL:/var/lib/postgresql/data
+      - /C:/codes/BackEnd-Java/docker/PostgreSQL:/var/lib/postgresql/data 
     networks:
-      - postgres-ebac-network
+      -    postgres-ebac-network
       
   ebac-pgadmin-compose:
     image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: "rpires@admin.com"
-      PGADMIN_DEFAULT_PASSWORD: "admin"
+      PGADMIN_DEFAULT_EMAIL: "eliezer@yahoo.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "994623470"
     ports:
       - "16543:80"
     depends_on:
